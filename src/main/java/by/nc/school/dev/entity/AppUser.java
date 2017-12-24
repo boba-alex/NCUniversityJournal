@@ -1,4 +1,4 @@
-package by.nc.school.dev.domain;
+package by.nc.school.dev.entity;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -33,6 +33,9 @@ public class AppUser implements UserDetails {
     @ElementCollection(fetch = FetchType.EAGER) // not default lazy initialization
     private List<String> roles = new ArrayList<>();
 
+    @OneToOne(cascade = CascadeType.ALL)
+    private StudentGroup studentGroup;
+
     public Long getId() {
         return id;
     }
@@ -63,6 +66,14 @@ public class AppUser implements UserDetails {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public StudentGroup getStudentGroup() {
+        return studentGroup;
+    }
+
+    public void setStudentGroup(StudentGroup studentGroup) {
+        this.studentGroup = studentGroup;
     }
 
     @JsonIgnore

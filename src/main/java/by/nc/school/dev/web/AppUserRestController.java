@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import by.nc.school.dev.domain.AppUser;
+import by.nc.school.dev.entity.AppUser;
 import by.nc.school.dev.repository.AppUserRepository;
 
 /**

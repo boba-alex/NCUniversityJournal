@@ -10,7 +10,8 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
-import by.nc.school.dev.domain.AppUser;
+import by.nc.school.dev.entity.AppUser;
+import by.nc.school.dev.entity.StudentGroup;
 import by.nc.school.dev.repository.AppUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -49,6 +50,7 @@ public class HomeRestController {
 		List<String> roles = new ArrayList<>();
 		roles.add("USER");
 		appUser.setRoles(roles);
+		appUser.setStudentGroup(new StudentGroup());//TO DO
 		return new ResponseEntity<AppUser>(appUserRepository.save(appUser), HttpStatus.CREATED);
 	}
 
