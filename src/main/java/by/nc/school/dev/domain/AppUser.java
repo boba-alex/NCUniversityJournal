@@ -26,8 +26,10 @@ public class AppUser implements UserDetails {
 
     @Column(unique = true)
     private String username;
+
     @JsonProperty(access = Access.WRITE_ONLY)
     private String password;
+
     @ElementCollection(fetch = FetchType.EAGER) // not default lazy initialization
     private List<String> roles = new ArrayList<>();
 
