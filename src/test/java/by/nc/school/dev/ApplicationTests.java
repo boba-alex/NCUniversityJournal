@@ -1,4 +1,4 @@
-package org.techforumist.jwt;
+package by.nc.school.dev;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class JwtSpringBootSecurityAngularjsApplicationTests {
+public class ApplicationTests {
 
 	@Test
 	public void contextLoads() {
