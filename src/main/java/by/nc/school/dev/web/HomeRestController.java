@@ -36,25 +36,6 @@ public class HomeRestController {
 	private AppUserRepository appUserRepository;
 
 	/**
-	 * This method is used for user registration. Note: user registration is not
-	 * require any authentication.
-	 * 
-	 * @param appUser
-	 * @return
-	 */
-	@RequestMapping(value = "/register", method = RequestMethod.POST)
-	public ResponseEntity<AppUser> createUser(@RequestBody AppUser appUser) {
-		if (appUserRepository.findOneByUsername(appUser.getUsername()) != null) {
-			throw new RuntimeException("Username already exist");
-		}
-		List<String> roles = new ArrayList<>();
-		roles.add("USER");
-		appUser.setRoles(roles);
-		appUser.setStudentGroup(new StudentGroup());//TO DO
-		return new ResponseEntity<AppUser>(appUserRepository.save(appUser), HttpStatus.CREATED);
-	}
-
-	/**
 	 * This method will return the logged user.
 	 * 
 	 * @param principal
