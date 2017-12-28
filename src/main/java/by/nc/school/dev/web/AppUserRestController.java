@@ -1,8 +1,11 @@
 package by.nc.school.dev.web;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import by.nc.school.dev.entity.Group;
+import by.nc.school.dev.entity.Subject;
+import by.nc.school.dev.repository.SubjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +29,9 @@ import by.nc.school.dev.repository.AppUserRepository;
 public class AppUserRestController {
 	@Autowired
 	private AppUserRepository appUserRepository;
+
+	@Autowired
+	private SubjectRepository subjectRepository;
 
 	/**
 	 * Web service for getting all the appUsers in the application.
@@ -109,6 +115,24 @@ public class AppUserRestController {
 			throw new RuntimeException("Username already exist");
 		}
 		return appUserRepository.save(appUser);
+	}
+
+	/**
+	 * Method for create subject
+	 *
+	 */
+	@RequestMapping(value = "/create-subject", method = RequestMethod.GET)
+	public List<Subject> subjects() {
+		return subjectRepository.findAll();
+	}
+
+	@RequestMapping(value = "/create-subject", method = RequestMethod.PUT)
+	public void createSubject(@RequestBody Subject subject) {
+		List<Subject> array = subjectRepository.findAllByName(subject.getName());
+		if(array.size() == 0){
+			subjectRepository.save(subject);
+		}
+
 	}
 
 }

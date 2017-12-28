@@ -23,7 +23,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	public void configure(WebSecurity web) throws Exception {
 
 		web.ignoring()
-				// ignoring the "/", "/index.html", "/app/**", "/register",
+				// ignoring the "/", "/index.html", "/app/**",
 				// "/favicon.ico"
 				.antMatchers("/", "/index.html", "/app/**", "/authenticate", "/favicon.ico");
 	}

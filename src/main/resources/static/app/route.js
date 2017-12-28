@@ -69,5 +69,17 @@ angular.module('JWTDemoApp').config(function($stateProvider, $urlRouterProvider)
 				controller : 'RegisterController'
 			}
 		}
-	});
+	}).state('create-subject', {
+        parent: 'nav',
+        url: '/create-subject',
+        data: {
+            role: 'ADMIN'
+        },
+        views: {
+            'content@': {
+                templateUrl: 'app/views/create-subject.html',
+                controller: 'CreateSubjectController'
+            }
+        }
+    });
 });
