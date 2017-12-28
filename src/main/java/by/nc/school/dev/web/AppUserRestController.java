@@ -2,6 +2,7 @@ package by.nc.school.dev.web;
 
 import java.util.List;
 
+import by.nc.school.dev.entity.Group;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -90,6 +91,7 @@ public class AppUserRestController {
 		if (appUserRepository.findOneByUsername(appUser.getUsername()) != null) {
 			throw new RuntimeException("Username already exist");
 		}
+		//appUser.setGroup(new Group()); TODO
 		return new ResponseEntity<AppUser>(appUserRepository.save(appUser), HttpStatus.CREATED);
 	}
 

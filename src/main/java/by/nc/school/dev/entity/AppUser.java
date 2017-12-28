@@ -34,7 +34,7 @@ public class AppUser implements UserDetails {
     private List<String> roles = new ArrayList<>();
 
     @OneToOne(cascade = CascadeType.ALL)
-    private StudentGroup studentGroup;
+    private Group group;
 
     public Long getId() {
         return id;
@@ -68,12 +68,12 @@ public class AppUser implements UserDetails {
         this.password = password;
     }
 
-    public StudentGroup getStudentGroup() {
-        return studentGroup;
+    public Group getGroup() {
+        return group;
     }
 
-    public void setStudentGroup(StudentGroup studentGroup) {
-        this.studentGroup = studentGroup;
+    public void setGroup(Group group) {
+        this.group = group;
     }
 
     @JsonIgnore
