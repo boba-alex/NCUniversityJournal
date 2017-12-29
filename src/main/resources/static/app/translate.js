@@ -6,10 +6,8 @@ angular.module('JWTDemoApp')
         // Английский
         $translateProvider.translations('en', {
             REGISTER: 'Register',
-            INSTRUCTIONS: 'Instructions',
             PROFILE: 'Profile',
             USERS: 'Users',
-            CREATE_SUBJECT: 'Create subject',
             HI: 'Hi',
             LOGOUT: 'Logout',
             LOGIN: 'Login',
@@ -25,31 +23,23 @@ angular.module('JWTDemoApp')
             BUTTON_UPDATE_USER: 'Update',
             USERS: 'Users',
             BUTTON_NEW_USER: 'New user',
-            //create-instruction
-            ADD_INSTRUCTION: 'Add instruction',
+            //create-subject
+            CREATE_SUBJECT: 'Create subject',
             CREATE: 'Create',
             UPDATE: 'Update',
-            CREATOR: 'Creator',
             NAME_OF_SUBJECT: 'Name of subject',
-            TAGS_OF_INSTRUCTION: 'Tags of instruction',
-            CATEGORY_OF_INSTRUCTION: 'Category of instruction',
-            //instructions
-            NEW_INSTRUCTION: 'New instruction',
-            NUMBER_OF_STEPS: 'Number of steps',
-            NUMBER_OF_COMMENTS: 'Number of comments',
-            DATE_OF_CREATION: 'Date of creation',
             //profile
             ABOUT_ME: 'About me',
             ADDRESS: 'Address',
-            BRONZE_INSTRUCTION_CREATOR: 'Bronze instruction creator',
-            FOR_MAKE_0_INSTRUCTIONS: 'For make 0 instructions!',
-            BRONZE_STEP_CREATOR: 'For make 0 steps!',
-            ACHIEVEMENTS: 'Achievements',
             COUNTRY: 'Country',
             CITY: 'City',
             UNIVERSITY: 'University',
             JOB: 'Job',
-            ACCESS_DENIED: 'Access Denied'
+            ACCESS_DENIED: 'Access Denied',
+            //add-workplan
+            ADD_WORKPLAN: 'Add workplan',
+            NUMBER_OF_SEMESTER: 'Number of semester',
+            NAME_OF_SUBJECT: 'Name of subject'
 
 
         });
@@ -59,7 +49,6 @@ angular.module('JWTDemoApp')
             INSTRUCTIONS: 'Инструкции',
             PROFILE: 'Профиль',
             USERS: 'Пользователи',
-            CREATE_SUBJECT: 'Добавить учебный предмет',
             HI: 'Привет',
             LOGOUT: 'Выйти',
             LOGIN: 'Войти',
@@ -75,31 +64,24 @@ angular.module('JWTDemoApp')
             BUTTON_UPDATE_USER: 'Обновить',
             USERS: 'Пользователи',
             BUTTON_NEW_USER: 'Новый пользователь',
-            //create-instruction
-            ADD_INSTRUCTION: 'Добавить инструкцию',
+            //create-subject
+            CREATE_SUBJECT: 'Добавить учебный предмет',
             CREATE: 'Создать',
             UPDATE: 'Обновить',
             CREATOR: 'Создатель',
             NAME_OF_SUBJECT: 'Название учебного предмета',
-            TAGS_OF_INSTRUCTION: 'Тэги инструкции',
-            CATEGORY_OF_INSTRUCTION: 'Категория инструкции',
-            //instructions
-            NEW_INSTRUCTION: 'Новая инструкция',
-            NUMBER_OF_STEPS: 'Количество шагов',
-            NUMBER_OF_COMMENTS: 'Количество комментариев',
-            DATE_OF_CREATION: 'Дата создания',
             //profile
             ABOUT_ME: 'Обо мне',
             ADDRESS: 'Адрес',
-            BRONZE_INSTRUCTION_CREATOR: 'Бронзовый создатель инструкций',
-            FOR_MAKE_0_INSTRUCTIONS: 'За 0 инструкций!',
-            BRONZE_STEP_CREATOR: 'За 0 шагов!',
-            ACHIEVEMENTS: 'Награды',
             COUNTRY: 'Страна',
             CITY: 'Город',
             UNIVERSITY: 'Университет',
             JOB: 'Профессия',
-            ACCESS_DENIED: 'В доступе отказано'
+            ACCESS_DENIED: 'В доступе отказано',
+            //add-workplan
+            ADD_WORKPLAN: 'Добавить учебный план',
+            NUMBER_OF_SEMESTER: 'Номер семестра',
+            NAME_OF_SUBJECT: 'Название предмета'
 
         });
         // Устанавливаем язык по умолчанию

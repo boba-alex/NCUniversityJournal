@@ -15,11 +15,14 @@ public class WorkPlan {
     @OneToOne
     private AppUser appUser;
 
+    public WorkPlan(){}
+
     public WorkPlan(Subject subject, Semester semester, AppUser appUser) {
         this.subject = subject;
         this.semester = semester;
         this.appUser = appUser;
     }
+
 
     public Long getId() {
         return id;

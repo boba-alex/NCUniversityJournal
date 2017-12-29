@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">{{'ADD_WORKPLAN' | translate}}</div>
+            <div class="panel-body">
+                <div class="col-md-12">
+                    <form ng-submit="submit()" name="userForm" novalidate>
+                        <div class="form-group"
+                             ng-class="{ 'has-error': userForm.name.$invalid && userForm.name.$dirty }">
+                            <label for="semester-name">{{'NUMBER_OF_SEMESTER' | translate}}:</label> <input type="text" required
+                                                                                                class="form-control" ng-model="workPlanModel.semesterNumber"
+                                                                                                id="semester-name"
+                                                                                                name="name">
+                        </div>
+                        <div class="form-group"
+                             ng-class="{ 'has-error': userForm.name.$invalid && userForm.name.$dirty }">
+                            <label for="subject-name">{{'NAME_OF_SUBJECT' | translate}}:</label> <input type="text" required
+                                                                                                class="form-control" ng-model="workPlanModel.subjectName"
+                                                                                                id="subject-name"
+                                                                                                name="name">
+                        </div>
+                        <div class="form-group"
+                             ng-class="{ 'has-error': userForm.name.$invalid && userForm.name.$dirty }">
+                            <label for="username">{{'USERNAME' | translate}}:</label> <input type="text" required
+                                                                                                class="form-control" ng-model="workPlanModel.appUserUserName"
+                                                                                                id="username"
+                                                                                                name="name">
+                        </div>
+                        <button type="submit" class="btn btn-default"
+                                ng-disabled="userForm.$invalid">{{buttonText | translate}}
+                        </button>
+                        <div class="alert alert-info margin-top-5" ng-show="message">{{message}}</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <table class="table table-bordered" id="exportToPDFThis">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>{{'NUMBER_OF_SEMESTER' | translate}}</th>
+                <th>{{'NAME_OF_SUBJECT' | translate}}</th>
+                <th>{{'NAME' | translate}}</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="workPlan in workPlans">
+                <td>{{$index+1}}</td>
+                <td>{{workPlan.semester.semesterNumber}}</td>
+                <td>{{workPlan.subject.name}}</td>
+                <td>{{workPlan.appUser.name}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
