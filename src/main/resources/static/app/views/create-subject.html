@@ -1,30 +1,30 @@
 <div class="row">
     <div class="col-md-4 col-md-offset-4">
         <div class="panel panel-default">
-            <div class="panel-heading">Add subject</div>
+            <div class="panel-heading">{{'CREATE_SUBJECT' | translate}}</div>
             <div class="panel-body">
                 <div class="col-md-12">
                     <form ng-submit="submit()" name="userForm" novalidate>
                         <div class="form-group"
                              ng-class="{ 'has-error': userForm.name.$invalid && userForm.name.$dirty }">
-                            <label for="name">Name of subject</label> <input type="text" required
+                            <label for="name">{{'NAME_OF_SUBJECT' | translate}}:</label> <input type="text" required
                                                                    class="form-control" ng-model="subject.name"
                                                                    id="name"
                                                                    name="name">
                         </div>
                         <button type="submit" class="btn btn-default"
-                                ng-disabled="userForm.$invalid">buttonText
+                                ng-disabled="userForm.$invalid">{{buttonText | translate}}
                         </button>
                         <div class="alert alert-info margin-top-5" ng-show="message">{{message}}</div>
                     </form>
                 </div>
             </div>
         </div>
-        <table class="table table-bordered">
+        <table class="table table-bordered" id="exportToPDFThis">
             <thead>
             <tr>
                 <th>#</th>
-                <th>Name of subject</th>
+                <th>{{'NAME_OF_SUBJECT' | translate}}</th>
             </tr>
             </thead>
             <tbody>

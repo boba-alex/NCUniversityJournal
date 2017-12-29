@@ -25,6 +25,18 @@
     <div ui-view="content"></div>
 </div>
 
+
+<!-- View for adding the footer bar -->
+<div ui-view="footer">
+    <footer class="panel-footer">
+        <div class="container">
+            <div class="text-center">University Journal &copy; 2017
+                <a href="mailto:alexpol099099@gmail.com">Contact us</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
 <!-- Including Scripts -->
 <script
         src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -41,6 +53,15 @@
 <script type="text/javascript" src="app/app.js"></script>
 <script type="text/javascript" src="app/route.js"></script>
 
+<!--Including angular-translate.min.js-->
+<script type="text/javascript" src="app/angular-translate.min.js"></script>
+
+<!--Including pdfmake.min.js && html2canvas.min.js -->
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
 <!-- Including services -->
 <script type="text/javascript" src="app/services/auth-service.js"></script>
 
@@ -52,5 +73,7 @@
 <script type="text/javascript" src="app/controllers/page-not-found.js"></script>
 <script type="text/javascript" src="app/controllers/access-denied.js"></script>
 <script type="text/javascript" src="app/controllers/create-subject.js"></script>
+<script type="text/javascript" src="app/translate.js"></script>
+<script type="text/javascript" src="app/pdf.js"></script>
 </body>
 </html>
