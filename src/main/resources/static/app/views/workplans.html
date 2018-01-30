@@ -1,0 +1,19 @@
+
+        <table class="table table-bordered" id="exportToPDFThis">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>{{'NUMBER_OF_SEMESTER' | translate}}</th>
+                <th>{{'NAME_OF_SUBJECT' | translate}}</th>
+                <th>{{'NAME' | translate}}</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="workPlan in workPlans">
+                <td>{{$index+1}}</td>
+                <td>{{workPlan.semester.semesterNumber}}</td>
+                <td>{{workPlan.subject.name}}</td>
+                <td>{{workPlan.appUser.name}}</td>
+            </tr>
+            </tbody>
+        </table>

@@ -4,12 +4,15 @@ import java.io.IOException;
 import java.security.Principal;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
 import by.nc.school.dev.entity.AppUser;
+import by.nc.school.dev.entity.WorkPlan;
 import by.nc.school.dev.repository.AppUserRepository;
+import by.nc.school.dev.repository.WorkPlanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,6 +33,9 @@ import io.jsonwebtoken.SignatureAlgorithm;
 public class HomeRestController {
 	@Autowired
 	private AppUserRepository appUserRepository;
+
+	@Autowired
+	private WorkPlanRepository workPlanRepository;
 
 	/**
 	 * This method will return the logged user.
@@ -69,4 +75,5 @@ public class HomeRestController {
 		}
 
 	}
+
 }

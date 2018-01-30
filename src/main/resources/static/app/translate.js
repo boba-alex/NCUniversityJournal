@@ -39,7 +39,8 @@ angular.module('JWTDemoApp')
             //add-workplan
             ADD_WORKPLAN: 'Add workplan',
             NUMBER_OF_SEMESTER: 'Number of semester',
-            NAME_OF_SUBJECT: 'Name of subject'
+            NAME_OF_SUBJECT: 'Name of subject',
+            WORKPLANS: 'Work plans'
 
 
         });
@@ -81,7 +82,8 @@ angular.module('JWTDemoApp')
             //add-workplan
             ADD_WORKPLAN: 'Добавить учебный план',
             NUMBER_OF_SEMESTER: 'Номер семестра',
-            NAME_OF_SUBJECT: 'Название предмета'
+            NAME_OF_SUBJECT: 'Название предмета',
+            WORKPLANS: 'Планы'
 
         });
         // Устанавливаем язык по умолчанию

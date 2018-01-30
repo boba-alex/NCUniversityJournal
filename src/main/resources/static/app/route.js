@@ -93,5 +93,17 @@ angular.module('JWTDemoApp').config(function($stateProvider, $urlRouterProvider)
                 controller: 'AddWorkPlanController'
             }
         }
+    }).state('workplans', {
+        parent: 'nav',
+        url: '/workplans',
+        data: {
+            role: 'ADMIN'
+        },
+        views: {
+            'content@': {
+                templateUrl: 'app/views/workplans.html',
+                controller: 'WorkPlansController'
+            }
+        }
     });
 });

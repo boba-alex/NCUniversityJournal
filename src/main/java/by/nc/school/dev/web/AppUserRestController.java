@@ -7,6 +7,7 @@ import by.nc.school.dev.entity.*;
 import by.nc.school.dev.repository.SemesterRepository;
 import by.nc.school.dev.repository.SubjectRepository;
 import by.nc.school.dev.repository.WorkPlanRepository;
+import by.nc.school.dev.services.CheckService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -177,10 +178,14 @@ public class AppUserRestController {
 		Subject s = subjectRepository.findOneByName(workPlanModel.getSubjectName());
 		Semester sem = semesterRepository.findOneBySemesterNumber(Integer.parseInt(workPlanModel.getSemesterNumber()));
 		AppUser user = appUserRepository.findOneByUsername(workPlanModel.getAppUserUserName());
-		if(s!=null && sem!=null && user!=null){
+		if(s!=null && sem!=null && user!=null && CheckService.checkForTeacherRole(user)){
 			WorkPlan workPlan = new WorkPlan(s,sem,user);
 			workPlanRepository.save(workPlan);
 
 		}
+	}
+	@RequestMapping(value = "/workplans", method = RequestMethod.GET)
+	public List<WorkPlan> workPlans1() {
+		return workPlanRepository.findAll();
 	}
 }
